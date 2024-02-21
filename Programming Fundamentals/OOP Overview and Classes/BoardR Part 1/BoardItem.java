@@ -21,6 +21,6 @@ public class BoardItem {
     }
 
     public String viewInfo() {
-        return String.format(" '%s', [%s | %s]", this.title, this.dueDate, this.status);
+        return String.format(" '%s', [%s | %s]", this.title, this.status, this.dueDate);
     }
 }
