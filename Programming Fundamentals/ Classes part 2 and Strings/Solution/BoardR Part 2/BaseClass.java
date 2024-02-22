@@ -6,6 +6,6 @@ public class BaseClass {
         System.out.println(log.getDescription());
         System.out.println(log.viewInfo());
 
-        EventLog log2 = new EventLog("test");
+        EventLog log2 = new EventLog("");
     }
 }
