@@ -2,24 +2,11 @@ import java.time.LocalDate;
 
 public class BaseClass {
     public static void main(String[] args) {
-        // Create BoardItem instances
-        BoardItem item = new BoardItem("Registration doesn't work", LocalDate.now().plusDays(2));
-        item.advanceStatus(); // Advances the status of the item
-        BoardItem anotherItem = new BoardItem("Encrypt user data", LocalDate.now().plusDays(10));
+        BoardItem item = new BoardItem("Rewrite everything", LocalDate.now().plusDays(2));
 
-        // Create a Board instance and add items to it
-        Board board = new Board();
-        board.items.add(item);
-        board.items.add(anotherItem);
+        item.setTitle("Rewrite everything ASAP!!!"); // properly changing the title
+        System.out.println(item.getTitle()); // properly accessing the title
+        item.setTitle("Huh?"); // Exception thrown: Please provide a title with length between 5 and 30 chars
 
-        // Advance the status of each BoardItem in the board
-        for (BoardItem boardItem : board.items) {
-            boardItem.advanceStatus();
-        }
-
-        // Print information for each BoardItem in the board
-        for (BoardItem boardItem : board.items) {
-            System.out.println(boardItem.viewInfo());
-        }
     }
 }
