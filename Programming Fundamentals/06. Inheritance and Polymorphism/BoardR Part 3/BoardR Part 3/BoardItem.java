@@ -7,8 +7,8 @@ public class BoardItem {
     private Status status;
 
     public BoardItem(String title, LocalDate dueDate) {
-        setTitle(title);
-        setDueDate(dueDate);
+        this.title = title;
+        this.dueDate = dueDate;
         this.status = Status.OPEN;
     }
 
