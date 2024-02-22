@@ -2,11 +2,10 @@ import java.time.LocalDate;
 
 public class BaseClass {
     public static void main(String[] args) {
-        BoardItem item = new BoardItem("Rewrite everything", LocalDate.now().plusDays(2));
+        EventLog log = new EventLog("An important thing happened");
+        System.out.println(log.getDescription());
+        System.out.println(log.viewInfo());
 
-        item.setTitle("Rewrite everything ASAP!!!"); // properly changing the title
-        System.out.println(item.getTitle()); // properly accessing the title
-        item.setTitle("Huh?"); // Exception thrown: Please provide a title with length between 5 and 30 chars
-
+        EventLog log2 = new EventLog("test");
     }
 }

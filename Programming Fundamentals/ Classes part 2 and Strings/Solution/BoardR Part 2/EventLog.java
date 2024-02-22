@@ -5,21 +5,21 @@ import java.time.format.DateTimeFormatter;
 
 public class EventLog {
     private final String description;
-    private final LocalDate timestamp;
+    private final LocalDateTime timestamp;
 
     public EventLog(String description) {
         if (description == null || description.isEmpty()) {
             throw new IllegalArgumentException("Description cannot be empty or null");
         }
         this.description = description;
-        this.timestamp = LocalDate.now();
+        this.timestamp = LocalDateTime.now();
     }
 
     public String getDescription() {
         return this.description;
     }
 
-    public LocalDate getTimestamp() {
+    public LocalDateTime getTimestamp() {
         return this.timestamp;
     }
 
